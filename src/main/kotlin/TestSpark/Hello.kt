@@ -10,4 +10,6 @@ fun main(args: Array<String>) {
 
     get("/hello") { req, res -> "Hello World" }
 
+    get("/helloUser") { req, res -> "<H1>Hello ${req.queryParams("name")}</H1>" }
+
 }
